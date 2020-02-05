@@ -1,17 +1,16 @@
-@font-face {
-    font-family: 'Source Sans Pro';
-    src: url(../../font/Source_Sans_Pro/SourceSansPro-Regular.ttf);
-}
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300,400,700|Roboto:300,300i,400,700&display=swap');
 
-@font-face {
-    font-family: 'Ailerons';
-    src: url(../../font/Ailerons-Regular.ttf);
-}
 
-@font-face {
-    font-family: 'Fira Mono';
-    src: url(../../font/Fira_Mono/FiraMono-Regular.ttf);
-}
+
+
+$Montserrat: 'Montserrat',
+sans-serif;
+$KaushanScript: 'Kaushan Script',
+cursive;
+$Roboto:'Roboto',
+sans-serif;
+
+
 
 $colorPrimary: #ff9617;
 $colorSecondary: #4078c0;
