@@ -740,20 +740,20 @@
 //   }
 // }
 
+//--------------------------
 .c-logo {
     color: #ffffff;
     font-size: 30px;
     font-weight: 700;
 }
 
+//--------------------------
 .c-menu {
     min-width: 620px;
 
 
     &__list {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
+        @include flex(flex, center, space-evenly);
     }
 
     &__item {
@@ -792,7 +792,7 @@
     }
 }
 
-
+//--------------------------
 
 .c-intro {
     width: 90%;
@@ -826,6 +826,7 @@
     }
 }
 
+//--------------------------
 
 .c-button {
     color: #ffffff;
@@ -845,5 +846,163 @@
             background-color: #fce38a;
         }
     }
+}
 
+//--------------------------
+
+.c-header {
+
+    text-align: center;
+
+    &__title {
+        color: #333333;
+        font-family: "Kaushan Script";
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    &__subtitle {
+        font-size: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #333333;
+        margin-bottom: 90px;
+        position: relative;
+
+        &::before {
+            @include position($bottom:-35px, $left:50%);
+            transform: translate(-50%);
+            @include size(60px, 3px);
+            background-color: #f38181;
+
+        }
+    }
+
+    &__text {
+        color: #999999;
+        max-width: 950px;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 24px;
+        margin-bottom: 100px;
+    }
+}
+
+
+//--------------------------
+
+.c-card {
+
+    display: flex;
+
+    &__box {
+        background-color: #95e1d3;
+        position: relative;
+        cursor: pointer;
+
+        &:hover .c-card__pic {
+            transform: translate(-5%, -5%);
+
+            &::before {
+                background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
+            }
+        }
+
+        &:hover .c-card__text {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+
+
+        &:nth-child(2) {
+            margin: 0 30px;
+        }
+    }
+
+
+    &__pic {
+        @include size(100%);
+        position: relative;
+        transition: .4s all ease-in-out;
+
+        &::before {
+            @include position($top:0, $left:0);
+            @include size(100%);
+            opacity: 0.7;
+            transition: .4s all ease-in-out;
+        }
+
+        & img {
+            @include size(100%);
+        }
+
+    }
+
+    &__text {
+        @include position($top:0, $left:0);
+        @include size(100%);
+        @include flex(flex, center, center, column);
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #ffffff;
+        opacity: 0;
+        transform: translateX(-50px);
+        transition: .4s all ease-in-out;
+    }
+
+    &__icon {
+        margin-bottom: 12px;
+    }
+}
+
+
+//-------------------------
+
+.c-counter {
+    @include flex(flex, center, space-between);
+    width: 100%;
+    color: #ffffff;
+
+
+    &__item {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        padding: 90px 0;
+
+        &::before {
+            @include position($top:0, $left:0);
+            @include size(1px, 100%);
+            background-color: #ffffff;
+            opacity: 0.3;
+        }
+
+        &:nth-last-of-type(1) {
+            &::after {
+                @include position($top:0, $right:0);
+                @include size(1px, 100%);
+                background-color: #ffffff;
+                opacity: 0.3;
+            }
+        }
+
+
+    }
+
+    &__number {
+        font-size: 72px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
 }

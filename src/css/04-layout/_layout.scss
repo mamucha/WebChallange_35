@@ -27,9 +27,7 @@
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flex(flex, center, space-between);
   }
 }
 
@@ -56,6 +54,11 @@
       opacity: 0.6;
     }
   }
+
+  &--counter {
+    background-color: #95e1d3;
+  }
+
 }
 
 
@@ -66,4 +69,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  padding: 100px 0;
+
+  &__counter {
+    padding: 0;
+  }
+
 }
