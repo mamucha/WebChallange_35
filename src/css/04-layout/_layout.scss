@@ -59,6 +59,20 @@
     background-color: #95e1d3;
   }
 
+  &--unique {
+    background-image: url('../img/section-unique/pic-3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &::before {
+      @include position($top:0, $left:0);
+      @include size(100%);
+      background-color: rgba(255, 255, 255, 0.85);
+
+    }
+  }
+
 }
 
 
@@ -74,6 +88,10 @@
 
   &__counter {
     padding: 0;
+  }
+
+  &--unique {
+    padding-bottom: 0;
   }
 
 }

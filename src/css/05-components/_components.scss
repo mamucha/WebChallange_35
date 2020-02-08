@@ -853,6 +853,7 @@
 .c-header {
 
     text-align: center;
+    z-index: 3;
 
     &__title {
         color: #333333;
@@ -1058,3 +1059,16 @@
 
 
 //-------------------------
+
+.c-phone {
+
+    position: relative;
+
+    & img {
+        max-width: 100%;
+
+        &:nth-child(2) {
+            @include position($bottom:-17%, $right:-35%);
+        }
+    }
+}
