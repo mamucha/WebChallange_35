@@ -1006,3 +1006,55 @@
         text-transform: uppercase;
     }
 }
+
+
+//-------------------------
+
+.c-feature {
+    @include flex(flex, center, center, column);
+    position: relative;
+
+    &::after {
+        @include position($top:50%, $right:0);
+        @include size(100%, 2px);
+        background-color: #e5e5e5;
+    }
+
+    &__inline {
+        @include flex(flex, center, center);
+
+        &:nth-child(1) {
+            margin-bottom: 100px;
+        }
+    }
+
+    &__box {
+        @include flex(flex, flex-start, space-between);
+    }
+
+
+    &__icon {
+        @include size(auto);
+        max-width: 100%;
+        padding-right: 30px;
+    }
+
+    &__title {
+        color: #333333;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    &__description {
+        color: #999999;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 24px;
+    }
+}
+
+
+//-------------------------
