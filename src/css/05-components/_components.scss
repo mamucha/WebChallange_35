@@ -1072,3 +1072,78 @@
         }
     }
 }
+
+
+//-------------------------
+
+.c-info {
+    display: flex;
+    width: 100%;
+
+    &__img {
+        margin-right: 30px;
+
+        & img {
+            max-width: auto;
+            height: auto;
+            display: block;
+        }
+    }
+
+    &__pic {
+        @include flex(flex, center, center);
+        margin-right: 15px;
+
+        & img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &__link {
+        position: relative;
+        display: flex;
+        height: 60px;
+
+        &+div {
+            padding: 20px 22px 20px 0;
+        }
+    }
+
+    &__list {
+        width: 100%;
+    }
+
+    &__title {
+        @include flex(flex, center, center);
+        color: #333333;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    &__arrow {
+        @include position($top:50%, $right:0);
+        transform: translateY(-50%) rotate(180deg);
+        margin-right: 20px;
+        font-size: 26px;
+        transition: .4s all ease-in-out;
+
+    }
+}
+
+.card-body {
+    color: #999999;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 25px;
+    overflow: auto;
+    max-height: 131px;
+    padding: 0 20px;
+}
+
+
+a.collapsed>.c-info__arrow {
+    transform: translateY(-50%) rotate(0deg);
+}
