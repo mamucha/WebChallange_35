@@ -921,7 +921,16 @@
         &:nth-child(2) {
             margin: 0 30px;
         }
+
+
+        &--blog {
+            background-color: transparent;
+        }
+
     }
+
+
+
 
 
     &__pic {
@@ -937,10 +946,18 @@
         }
 
         & img {
-            @include size(100%, auto);
+            max-width: 100%;
+            height: auto;
             display: block;
         }
 
+        &--blog {
+            position: relative;
+
+            & img {
+                display: block;
+            }
+        }
     }
 
     &__text {
@@ -954,10 +971,50 @@
         opacity: 0;
         transform: translateX(-50px);
         transition: .4s all ease-in-out;
+
+        &--blog {
+            margin-top: 20px;
+            position: relative;
+
+            & p {
+                color: #333333;
+                font-size: 14px;
+                font-weight: 600;
+                text-transform: uppercase;
+
+                &:nth-last-of-type(1) {
+                    color: #999999;
+                    font-family: Roboto;
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    margin-top: 20px;
+                    text-transform: none;
+                }
+            }
+
+            &::before {
+                @include position($bottom:-30%, $left:0);
+                width: 380px;
+                height: 2px;
+                background-color: #e5e5e5;
+            }
+        }
     }
 
     &__icon {
         margin-bottom: 12px;
+
+        &--blog {
+
+            @include flex(flex, center, flex-start);
+            margin-top: 15%;
+
+            & p {
+                margin: 0 5%;
+            }
+        }
+
     }
 
 
@@ -1017,6 +1074,27 @@
         }
     }
 
+    &__date {
+        @include position($bottom:5%, $left:-5%);
+        @include size(60px, 70px);
+        @include flex(flex, center, center, column);
+        background-color: #95e1d3;
+        color: #ffffff;
+
+        & p {
+            font-family: Montserrat;
+            font-size: 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+
+            &:nth-last-of-type(1) {
+                font-family: "Roboto";
+                font-weight: 300;
+                font-style: italic;
+                font-size: 15px;
+            }
+        }
+    }
 }
 
 
