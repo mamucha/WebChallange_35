@@ -1283,3 +1283,22 @@ a.collapsed>.c-info__arrow {
 }
 
 // ----------------------------------
+
+.c-logo {
+
+    @include flex(flex, center, space-between);
+    @include size(100%);
+
+    &__box {
+        cursor: pointer;
+        transition: .4s all ease-in-out;
+
+        &:hover {
+            transform: scale(1.2) rotate(360deg);
+        }
+
+        & img {
+            display: block;
+        }
+    }
+}
