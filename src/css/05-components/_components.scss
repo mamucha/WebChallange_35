@@ -925,7 +925,7 @@
 
 
     &__pic {
-        @include size(100%);
+        @include size(100%, auto);
         position: relative;
         transition: .4s all ease-in-out;
 
@@ -959,7 +959,66 @@
     &__icon {
         margin-bottom: 12px;
     }
+
+
+    &__social {
+        @include position($top:0, $left:0);
+        @include size(100%);
+        @include flex(flex, center, center);
+        transform: translateY(20%);
+        opacity: 0;
+        transition: .3s all ease-in-out;
+
+        & a {
+            @include size(56px);
+            @include flex(flex, center, center);
+            background-color: #fce38a;
+            border-right: 1px solid #f38181;
+            color: #f38181;
+            font-size: 20px;
+            transition: .3s all ease-in-out;
+
+            &:nth-child(4) {
+                border: none;
+            }
+
+            &:hover {
+                background-color: #f38181;
+                color: #fff;
+            }
+        }
+
+        &:hover {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+    &__team {
+        @include position($bottom:-15%, $left:50%);
+        transform: translateX(-50%);
+        text-align: center;
+
+        & p {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #333333;
+
+            &:nth-last-of-type(1) {
+                color: #999999;
+                font-family: "Roboto";
+                font-style: italic;
+                font-size: 15px;
+                line-height: 24px;
+                text-transform: none;
+                padding-top: 5px;
+            }
+        }
+    }
+
 }
+
 
 
 //-------------------------
