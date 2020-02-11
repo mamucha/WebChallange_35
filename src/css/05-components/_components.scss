@@ -846,6 +846,19 @@
             background-color: #fce38a;
         }
     }
+
+    &--contact {
+        padding: 0;
+        border: none;
+        @include flex(flex, center, center);
+        width: 150px;
+        height: 40px;
+        background-color: #95e1d3;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
 }
 
 //--------------------------
@@ -1480,7 +1493,185 @@ a.collapsed>.c-info__arrow {
         color: #999999;
         font-family: Roboto;
         font-size: 15px;
-        font-weight: 400;
         line-height: 24px;
+    }
+}
+
+
+
+.c-contact {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    &__title {
+        color: #cccccc;
+        font-size: 46px;
+        font-weight: 700;
+        margin-bottom: 40px;
+
+        &--small {
+            color: #333333;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+    }
+
+    &__text {
+        max-width: 480px;
+        color: #999999;
+        font-family: Roboto;
+        font-size: 15px;
+        line-height: 24px;
+        margin-bottom: 45px;
+
+
+
+
+        &+p {
+            color: #333333;
+            font-size: 14px;
+            margin-bottom: 40px;
+            position: relative;
+
+            &::before {
+                @include position($bottom:-15px, $left:0);
+                width: 480px;
+                height: 2px;
+                background-color: #e5e5e5;
+            }
+
+            & span {
+                padding-right: 10px;
+                font-size: 18px;
+                font-weight: 700;
+            }
+        }
+    }
+
+
+    &__social {
+        display: flex;
+
+        & p {
+            color: #999999;
+            font-family: "Roboto";
+            font-size: 15px;
+            line-height: 24px;
+            font-style: italic;
+            padding-right: 20px;
+        }
+
+        &--box {
+            @include flex(flex, center, space-between);
+            max-width: 240px;
+            width: 100%;
+            margin-bottom: 40px;
+
+
+            & a {
+                color: #95e1d3;
+                transition: .4s all ease-in-out;
+                position: relative;
+
+                &::before {
+                    @include position($top:50%, $left:50%);
+                    @include size(40px);
+                    transform: translate(-50%, -50%);
+                    border: 1px solid #95e1d3;
+                    border-radius: 50%;
+                    transition: .4s all ease-in-out;
+                    opacity: 0;
+                }
+
+                &:hover {
+                    transform: scale(1.5);
+
+                    &::before {
+                        @include size(25px);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+
+    &__sub {
+        display: flex;
+        max-width: 380px;
+        width: 100%;
+
+        & input {
+            border: 1px solid #e7e7e7;
+            background-color: #ffffff;
+            color: #cccccc;
+            font-family: "Roboto";
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 24px;
+            padding-left: 4%;
+        }
+    }
+
+
+    &__post {
+        max-width: 345px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 35px;
+
+        &-img {
+            margin-right: 20px;
+
+            & img {
+                display: block;
+            }
+
+        }
+
+        &-title {
+            & p:first-child {
+                color: #333333;
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 18px;
+                text-transform: uppercase;
+            }
+
+            & p:nth-child(2) {
+                color: #999999;
+                font-family: "Roboto";
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 24px;
+            }
+        }
+    }
+
+
+    &__gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 2px;
+        position: relative;
+
+        &-box {
+            @include size(100%);
+
+            & img {
+                @include size(100%);
+            }
+        }
+
+        & p {
+            @include position($bottom:-15%, $left:0);
+            color: #333333;
+            font-family: "Roboto";
+            font-size: 13px;
+            line-height: 24px;
+            font-style: italic;
+        }
     }
 }

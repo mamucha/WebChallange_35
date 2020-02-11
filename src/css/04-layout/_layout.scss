@@ -93,6 +93,28 @@
     }
   }
 
+  &--map {
+    background-image: url('../img/section-map/pic-1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &::before {
+      @include position($top:0, $left:0);
+      @include size(100%);
+      background-color: rgba(255, 255, 255, 0.85);
+
+    }
+
+    & div {
+      padding: 20px 0;
+    }
+  }
+
+  &--contact {
+    background-color: #f8f8f8;
+  }
+
 }
 
 
@@ -123,4 +145,14 @@
     max-width: 1920px;
   }
 
+}
+
+
+.l-footer {
+  @include flex(flex, center, center);
+  padding: 30px 0;
+
+  & p>span {
+    color: #f38181;
+  }
 }
