@@ -40,15 +40,13 @@
   // justify-content: center;
 
   &--intro {
-    width: 100vw;
-    height: 100vh;
+    position: relative;
     background-image: url('../img/section-intro/pic-1.png');
     background-size: cover;
 
     &::after {
       @include position($top:0, $left:0);
-      width: 100vw;
-      height: 100vh;
+      @include size(100%);
       background-color: #fce38a;
       background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
       opacity: 0.6;
