@@ -1,747 +1,5 @@
-// .sidebar-logotype {
-//   display: none;
-//   @include box-size(100%, 80px);
-//   margin-bottom: 3rem;
-//   user-select: none;
-
-//   .logotype-link {
-//     @include box-size(100%, 100%);
-//     display: block;
-//     font-size: 2em;
-//     text-align: center;
-//     color: $colorFontsLight;
-//     text-decoration: none;
-//     text-transform: uppercase;
-//     font-family: $fontTypeTitle, sans-serif;
-//     transition: color 0.4s ease;
-
-//     &:hover {
-//       color: $colorPrimary;
-//     }
-//   }
-// }
-
-// .header-logotype {
-//   @include box-size(auto, 60px);
-//   transform: translate(-2vw, 0);
-//   user-select: none;
-
-//   .logotype-link {
-//     @include box-size(100%, 100%);
-//     display: block;
-//     font-size: 1.5em;
-//     line-height: 60px;
-//     color: $colorFontsLight;
-//     text-decoration: none;
-//     text-transform: uppercase;
-//     font-family: $fontTypeTitle, sans-serif;
-//     transition: color 0.4s ease;
-
-//     &:hover {
-//       color: $colorPrimary;
-//     }
-//   }
-// }
-
-// .profile {
-//   @include box-size(100px, 100px);
-//   background-repeat: no-repeat;
-//   background-position: center center;
-//   background-size: contain;
-//   text-align: center;
-//   border-radius: 100%;
-//   margin: 0 auto 1rem auto;
-// }
-
-// .motto {
-//   @include box-size(100%, 20px);
-//   color: $colorFontsLight;
-//   text-align: center;
-//   font-size: 0.7vw;
-//   text-transform: uppercase;
-//   opacity: 0.6s;
-//   margin-bottom: 1rem;
-// }
-
-// .social-media {
-//   @include box-size(100%, 30px);
-//   @include flex(row, nowrap, space-evenly, center);
-//   margin-bottom: 2rem;
-
-//   .media-link {
-//     text-decoration: none;
-//     color: $colorFontsLight;
-//     font-size: 1.2em;
-//     transition: color 0.4s ease;
-
-//     &:hover {
-//       color: $colorPrimary;
-//     }
-//   }
-// }
-
-// .series-posts {
-//   @include box-size(100%, auto);
-//   border-radius: 5px;
-//   padding: 1rem;
-//   background-color: $colorMedium;
-//   overflow-y: scroll;
-//   box-shadow: inset 0 0 30px -10px $colorShadow;
-
-//   &::-webkit-scrollbar-track {
-//     background-color: transparent;
-//   }
-
-//   &::-webkit-scrollbar {
-//     width: 5px;
-//   }
-
-//   &::-webkit-scrollbar-thumb {
-//     background-color: $colorLight;
-//     border-radius: 10px;
-//   }
-
-//   .news-title {
-//     @include box-size(100%, 60px);
-//     font-size: 1.2em;
-//     color: $colorFontsLight;
-//     text-transform: uppercase;
-//   }
-
-//   .news-link {
-//     @include box-size(100%, auto);
-//     @include flex(row, wrap, center, center);
-//     border-bottom: solid 0.4px $colorSeparateMedium;
-//     padding: 0.5em 0 0.5rem 0;
-
-//     .news-name {
-//       display: block;
-//       @include box-size(100%, 50%);
-//       font-size: 1em;
-//       color: $colorFontsLight;
-//       text-decoration: none;
-//       transition: color 0.4s ease;
-
-//       &:hover {
-//         color: $colorPrimary;
-//       }
-//     }
-
-//     /* .post-readme-time {
-// 				display: block;
-// 				@include box-size(100%, 50%);
-// 				font-size: 1em;
-// 				color: $colorSeparateMedium;
-// 			} */
-//   }
-// }
-
-// /* .categories {
-// 	margin-bottom: 1rem;
-
-// 	.ctg {
-// 		@include box-size(100%, auto);
-// 		@include flex(row, nowrap, center, center);
-// 		border-bottom: solid 0.4px $colorSeparateMedium;
-// 		padding: 0.5em 0 0.5rem 0;
-
-// 		.post-title {
-// 			display: block;
-// 			@include box-size(95%, 50%);
-// 			font-size: 1em;
-// 			color: $colorFontsLight;
-// 			text-decoration: none;
-// 			transition: color 0.4s ease;
-
-// 			&:hover {
-// 				color: $colorPrimary;
-// 			}
-// 		}
-
-// 		.ctg-count {
-// 			display: block;
-// 			@include box-size(5%, 50%);
-// 			font-size: 1em;
-// 			color: $colorSeparateMedium;
-// 		}
-// 	}
-// } */
-
-// .menu {
-//   @include box-size();
-//   @include flex(row, nowrap, flex-end, center);
-//   padding-right: 1rem;
-//   list-style: none;
-//   user-select: none;
-//   overflow: hidden;
-
-//   .menu-item-wrapper .menu-item {
-//     text-decoration: none;
-//     font-size: 0.9em;
-//     color: $colorLight;
-//     margin: 0 1rem;
-//     text-transform: uppercase;
-//     transition: color 0.4s ease;
-
-//     &:hover {
-//       color: $colorPrimary;
-//     }
-//   }
-// }
-
-// .card {
-//   position: relative;
-//   @include box-size(450px, 300px);
-//   @include flex(row, wrap, center, center);
-//   margin: 0 0 3rem 0;
-//   border-radius: 5px;
-//   background: #ffffff;
-//   box-shadow: 0 0 10px -2px $colorShadow;
-//   transition: box-shadow 0.4s ease;
-
-//   .card-banner {
-//     @include box-size(100%, 50%);
-//     border-radius: 5px 5px 0px 0px;
-//     clip-path: polygon(
-//       70% 100%,
-//       0 100%,
-//       0 0,
-//       100% 0,
-//       100% 100%,
-//       80% 100%,
-//       75% 90%
-//     );
-//     box-shadow: inset 0 -10px 30px -15px $colorShadow;
-//     background-repeat: no-repeat;
-//     background-position: center center;
-//     background-size: 100%;
-//     transition: all 0.4s ease;
-//   }
-
-//   .card-glass {
-//     position: absolute;
-//     display: block;
-//     @include box-size();
-//   }
-
-//   .card-information {
-//     @include box-size(100%, 20%);
-//     @include flex(row, nowrap, flex-end, center);
-//     padding-right: 2rem;
-
-//     .card-readme-time,
-//     .card-separate,
-//     .card-date {
-//       margin: 0 0.5rem;
-//       font-size: 1em;
-//       color: $colorFontsMedium;
-//     }
-
-//     .tags-list {
-//       margin: 0 0.5rem;
-
-//       .tag {
-//         @include box-size(20px, 20px);
-//       }
-//     }
-//   }
-
-//   .card-title {
-//     @include box-size(100%, 30%);
-//     border-radius: 0px 0px 5px 5px;
-//     padding: 0rem 2rem 1rem 2rem;
-//     font-size: 1.2em;
-//     font-weight: bold;
-//     text-align: center;
-//     color: $colorFontsDark;
-//     transition: all 0.4s ease;
-//     overflow: hidden;
-//   }
-
-//   &:hover {
-//     box-shadow: 5px 5px 30px -5px $colorShadow;
-//   }
-
-//   &:hover .card-title {
-//     color: $colorPrimary;
-//   }
-// }
-
-// .pagination {
-//   @include box-size(100%, 100px);
-//   @include flex(row, wrap, center, center);
-//   padding: 0 3.5rem 2rem 3.5rem;
-
-//   .pagination-page-number {
-//     @include box-size(100%, 40%);
-//     text-align: center;
-//     line-height: 24px;
-//     font-size: 1.2em;
-//     color: $colorFontsDark;
-//     margin-bottom: 1rem;
-//   }
-
-//   .pagination-page-button {
-//     @include box-size(100%, 60%);
-//     text-align: center;
-
-//     .link {
-//       display: block;
-//       @include box-size();
-//       border: solid 1px $colorDark;
-//       border-radius: 5px;
-//       text-decoration: none;
-//       line-height: 36px;
-//       color: $colorDark;
-//       transition: all 0.4s ease;
-
-//       &:hover {
-//         border: solid 1px $colorPrimary;
-//         color: $colorPrimary;
-//       }
-//     }
-//   }
-// }
-
-// .footer-user {
-//   @include box-size(50%, 100%);
-//   @include flex();
-
-//   .copyright {
-//     font-size: 0.9em;
-//     text-transform: uppercase;
-//     color: $colorFontsLight;
-//     opacity: 0.6;
-//   }
-// }
-
-// .footer-ghost {
-//   @include box-size(50%, 100%);
-//   @include flex();
-
-//   .information {
-//     font-size: 0.9em;
-//     text-transform: uppercase;
-//     color: $colorFontsLight;
-//     opacity: 0.6;
-//   }
-
-//   .author {
-//     color: $colorPrimary;
-//   }
-// }
-
-// .share-container {
-//   @include box-size(100%, auto);
-//   border-top: solid 1px rgba(38, 41, 58, 0.1);
-//   border-bottom: solid 1px rgba(38, 41, 58, 0.1);
-//   margin: 3rem 0 2rem 0;
-
-//   .share-description {
-//     color: $colorFontsMedium;
-//     margin: 0 0 1rem 0;
-//   }
-
-//   .social-media-wrapper {
-//     @include box-size(100%, auto);
-//     @include flex(row, wrap, flex-start, flex-start);
-//     margin: 2rem 0 2rem 0;
-//   }
-
-//   .social-media {
-//     display: block;
-//     @include box-size(auto, 40px);
-//     @include flex(row, nowrap, center, center);
-//     text-decoration: none !important;
-//     border-radius: 5px;
-//     transform: translate(0);
-//     text-decoration: none;
-//     margin: 1rem;
-//     transition: transform 1s ease;
-
-//     &:before {
-//       position: initial;
-//       width: 0;
-//     }
-
-//     .share-icon {
-//       display: block;
-//       @include box-size(20%, 100%);
-//       font-size: 1em;
-//       text-align: center;
-//       line-height: 40px;
-//       margin: 0 0.5rem 0 1rem;
-//       color: $colorFontsLight;
-//     }
-
-//     .share-name {
-//       display: block;
-//       @include box-size(80%, 100%);
-//       font-size: 1em;
-//       text-align: center;
-//       line-height: 40px;
-//       color: $colorFontsLight;
-//       margin: 0 1rem 0 0.5rem;
-//     }
-
-//     &:nth-child(1) {
-//       background-color: rgb(59, 89, 152);
-//     }
-
-//     &:nth-child(2) {
-//       background-color: rgb(29, 161, 242);
-//     }
-
-//     &:nth-child(3) {
-//       background-color: rgb(221, 76, 57);
-//     }
-
-//     &:nth-child(4) {
-//       background-color: rgb(0, 119, 181);
-//     }
-
-//     &:hover {
-//       transform: translate(0, -10px);
-//     }
-//   }
-// }
-
-// .read-next-wrapper {
-//   @include box-size(100%, auto);
-
-//   .read-next {
-//     @include box-size();
-//     @include flex();
-//     margin: 3rem 0 3rem 0;
-
-//     .prev-story {
-//       border-radius: 30px 0 0 30px;
-//     }
-
-//     .next-story {
-//       border-radius: 0 30px 30px 0;
-//     }
-
-//     .next-story,
-//     .prev-story {
-//       display: block;
-//       @include box-size(50%, 250px);
-//       @include flex(column, nowrap, center, center);
-//       text-decoration: none;
-//       background-color: $colorMedium;
-//       transition: background-color 0.4s ease;
-
-//       &:before {
-//         position: initial;
-//         width: 0;
-//       }
-
-//       .title {
-//         display: block;
-//         @include box-size(100%, 50%);
-//         font-size: 1.8em;
-//         line-height: 50px;
-//         text-align: center;
-//         margin: 0;
-//         padding: 1rem;
-//         color: $colorFontsLight;
-//         transition: color 0.4s ease;
-//       }
-
-//       .description {
-//         display: block;
-//         @include box-size(100%, 50%);
-//         font-size: 1em;
-//         text-align: center;
-//         padding: 1rem;
-//         margin: 0;
-//         color: $colorFontsLight;
-//         transition: color 0.4s ease;
-//       }
-
-//       &:hover {
-//         background-color: $colorLight;
-//         border: solid 2px $colorSecondary;
-//       }
-//     }
-
-//     .prev-story:nth-child(1),
-//     .next-story:nth-child(1) {
-//       border-right: solid 2px $colorSecondary;
-//     }
-
-//     .prev-story:hover .title,
-//     .prev-story:hover .description,
-//     .next-story:hover .title,
-//     .next-story:hover .description {
-//       color: $colorFontsDark;
-//     }
-//   }
-// }
-
-// .tag-title {
-//   @include box-size(100%, 200px);
-//   @include flex(column, nowrap, center, center);
-
-//   .tag {
-//     @include box-size(50px, 50px);
-//     background-repeat: no-repeat;
-//     background-position: center center;
-//     background-size: contain;
-//     margin: 0.5rem 0 0.5rem 0;
-//   }
-
-//   .tag-description {
-//     margin: 0.5rem 0 0.5rem 0;
-//     color: $colorFontsDark;
-//     font-size: 2em;
-//   }
-// }
-
-// .hamburger-button {
-//   padding-left: 2rem;
-//   display: none !important;
-//   font-size: 0.9em;
-//   color: $colorFontsLight;
-//   transition: color 0.4s ease;
-
-//   &:hover {
-//     color: $colorPrimary;
-//   }
-// }
-
-// .central-structure {
-//   @include box-size(100%, calc(100% - 60px));
-//   @include flex(row, nowrap, center, flex-start);
-// }
-
-// .filter {
-//   @include box-size(100%, 150px);
-//   @include flex();
-
-//   .filter-wrapper {
-//     @include box-size(60%, 100%);
-//     @include flex();
-
-//     .filter-item {
-//       position: relative;
-//       @include box-size(auto, 30px);
-//       overflow: hidden;
-//       margin: 0 0.5rem 0 0.5rem;
-//       transition: all 0.4s ease;
-
-//       .filter-image {
-//         display: block;
-//         @include box-size(100%, 30px);
-//         background-repeat: no-repeat;
-//         background-position: center center;
-//         background-size: 30px;
-//         transition: all 0.4s ease;
-//       }
-
-//       .filter-name {
-//         display: block;
-//         @include box-size(auto, 30px);
-//         color: $colorFontsDark;
-//         font-size: 1em;
-//         line-height: 30px;
-//         transition: all 0.4s ease;
-//       }
-
-//       .filter-glass {
-//         position: absolute;
-//         display: block;
-//         top: 0;
-//         @include box-size(100%, 30px);
-
-//         &:hover + .filter-image {
-//           margin-top: -30px;
-//         }
-//       }
-//     }
-//   }
-// }
-
-// .post-list {
-//   @include box-size(100%, auto);
-//   @include flex(row, wrap, space-around, flex-start);
-//   padding: 1rem 3.5rem 2rem 3.5rem;
-//   border-radius: 0px 0px 0px 50px;
-// }
-
-// .post-wrapper {
-//   width: 100%;
-//   margin: 0 4rem 0 4rem;
-
-//   .title-wrapper {
-//     @include box-size(100%, auto);
-//     margin: 1rem 0 2rem 0;
-
-//     .post-tag {
-//       display: inline-block;
-//       @include box-size(24px, 24px);
-//       margin: 0 0.2rem 0 0.2rem;
-//       background-repeat: no-repeat;
-//       background-position: center center;
-//       background-size: contain;
-//     }
-
-//     @include postTitle();
-//   }
-
-//   @include elementsGenerics();
-// }
-
-// @media only screen and (max-width: $pcFormatStandard) {
-//   .card {
-//     width: 350px;
-//     margin: 0 0.5rem 3rem 0.5rem;
-//   }
-// }
-
-// @media only screen and (max-width: $pcFormatUltraHD) {
-//   .header-logotype {
-//     transform: translate(1vw, 0);
-//   }
-
-//   .card {
-//     width: 400px;
-//   }
-// }
-
-// @media only screen and (max-width: $pcFormatHabitual) {
-//   .logotype-link {
-//     font-size: 1.2em;
-//   }
-// }
-
-// @media only screen and (max-width: $pcFormatHD) {
-//   .card {
-//     width: 350px;
-//   }
-// }
-
-// @media only screen and (max-width: $pcFormatSmall) {
-//   .header-logotype {
-//     display: none;
-//   }
-
-//   .sidebar-logotype {
-//     display: block;
-//   }
-
-//   .post-wrapper {
-//     padding: 0 2rem 0 2rem;
-//   }
-
-//   .hamburger-button {
-//     display: inline-block !important;
-//   }
-
-//   .card {
-//     width: 350px;
-//   }
-
-//   .motto {
-//     font-size: 0.9em;
-//   }
-// }
-
-// @media only screen and (max-width: $mobileFormatBig) {
-//   .card {
-//     width: 400px;
-//     margin: 0 0 3rem 0;
-//   }
-
-//   .footer-user {
-//     @include box-size();
-//   }
-
-//   .footer-ghost {
-//     @include box-size(80%, 100%);
-//     margin-bottom: 1rem;
-//     text-align: center;
-//   }
-
-//   .read-next {
-//     flex-flow: column nowrap !important;
-
-//     .title {
-//       font-size: 1.2em !important;
-//     }
-
-//     .description {
-//       overflow-x: hidden !important;
-//     }
-
-//     .prev-story {
-//       width: 100% !important;
-//       border-radius: 5px 5px 0 0 !important;
-//       height: 210px !important;
-//       overflow-x: hidden;
-//       border-right: solid 0px;
-//       border-bottom: solid 2px $colorSecondary;
-//     }
-
-//     .next-story {
-//       width: 100% !important;
-//       border-radius: 0 0 5px 5px !important;
-//       height: 210px;
-//       overflow-x: hidden;
-//     }
-//   }
-// }
-
-// @media only screen and (max-width: $mobileFormatStandard) {
-//   .filter-wrapper {
-//     width: 85%;
-//   }
-
-//   .filter-item {
-//     margin: 0 1rem 0 1rem;
-//   }
-
-//   .filter-item:hover + .filter-image {
-//     margin: 0;
-//   }
-
-//   .tags-list {
-//     margin: 0 0 0 0.3rem;
-//   }
-
-//   .card-readme-time,
-//   .card-separate,
-//   .card-date {
-//     margin: 0 0.1rem;
-//     font-size: 0.8em;
-//   }
-
-//   .post-tag {
-//     font-size: 2.5em;
-//   }
-
-//   .hamburger-button {
-//     font-size: 0.7em;
-//   }
-
-//   .menu {
-//     @include box-size();
-//     @include flex(row, nowrap, center, center);
-//     padding-right: 0;
-
-//     .menu-item-wrapper .menu-item {
-//       font-size: 0.7em;
-//       margin: 0 0.5rem;
-//     }
-//   }
-
-//   .card-banner {
-//     box-shadow: inset 0 -10px 30px -20px $colorShadow;
-//   }
-// }
-
 //--------------------------
-.c-logo {
+.c-logo__title {
     color: #ffffff;
     font-size: 30px;
     font-weight: 700;
@@ -749,20 +7,21 @@
 
 //--------------------------
 .c-menu {
-    min-width: 620px;
+    max-width: 620px;
+
+
 
 
     &__list {
         @include flex(flex, center, space-evenly);
+
     }
 
     &__item {
         list-style: none;
 
         &:hover .c-menu__link::before {
-
             transform: translate(-50%, 0) scaleX(1);
-
         }
     }
 
@@ -773,7 +32,7 @@
         font-weight: 400;
         text-transform: uppercase;
         text-decoration: none;
-        transition: .3s all ease-in-out;
+        transition: 0.3s all ease-in-out;
         position: relative;
 
         &::before {
@@ -783,11 +42,58 @@
             width: 50%;
             background-color: #fce38a;
             transform-origin: center;
-            transition: .3s all ease-in-out;
+            transition: 0.3s all ease-in-out;
         }
 
         &:hover {
             color: #fce38a;
+            text-decoration: none;
+        }
+    }
+}
+
+//media queries
+//screen < 768px
+
+@mixin c-menu\@screen_medium {
+    .c-menu {
+
+        max-width: 100%;
+
+        &__list {
+            z-index: 3;
+            @include position($top:60px, $left:0);
+            @include flex(flex, center, center, column);
+            display: none;
+            width: 100%;
+            background-color: #ffffff;
+            opacity: .7;
+
+            &--active {
+                opacity: 1;
+            }
+        }
+
+        &__item {
+            height: 30px;
+            @include flex(flex, center, center);
+            width: 100%;
+            cursor: pointer;
+            transition: .3s all ease-in-out;
+
+            &:hover {
+                background-color: #edbf88;
+            }
+        }
+
+        &__button {
+            height: 30px;
+            padding: 0 20px;
+            border: 2px solid #777777;
+            background-color: transparent;
+            color: #777777;
+            border-radius: 5px;
+            cursor: pointer;
         }
     }
 }
@@ -817,7 +123,7 @@
         position: relative;
 
         &::before {
-            @include position($bottom:-30px, $left:50%);
+            @include position($bottom: -30px, $left: 50%);
             transform: translate(-50%);
             @include size(60px, 3px);
             background-color: #fff;
@@ -840,7 +146,7 @@
 
     &--intro {
         margin-top: 100px;
-        transition: .3s all ease-in-out;
+        transition: 0.3s all ease-in-out;
 
         &:hover {
             background-color: #fce38a;
@@ -864,7 +170,6 @@
 //--------------------------
 
 .c-header {
-
     text-align: center;
     z-index: 3;
 
@@ -885,11 +190,10 @@
         position: relative;
 
         &::before {
-            @include position($bottom:-35px, $left:50%);
+            @include position($bottom: -35px, $left: 50%);
             transform: translate(-50%);
             @include size(60px, 3px);
             background-color: #f38181;
-
         }
     }
 
@@ -905,11 +209,9 @@
     }
 }
 
-
 //--------------------------
 
 .c-card {
-
     display: flex;
 
     &__box {
@@ -921,7 +223,9 @@
             transform: translate(-5%, -5%);
 
             &::before {
-                background-image: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%);
+                background-image: linear-gradient(to top,
+                        rgba(252, 227, 138, 0.9) 0%,
+                        rgba(243, 129, 129, 0.9) 100%);
             }
         }
 
@@ -930,33 +234,26 @@
             transform: translateX(0px);
         }
 
-
         &:nth-child(2) {
             margin: 0 30px;
         }
-
 
         &--blog {
             background-color: transparent;
             cursor: auto;
         }
-
     }
-
-
-
-
 
     &__pic {
         @include size(100%, auto);
         position: relative;
-        transition: .4s all ease-in-out;
+        transition: 0.4s all ease-in-out;
 
         &::before {
-            @include position($top:0, $left:0);
+            @include position($top: 0, $left: 0);
             @include size(100%);
             opacity: 0.7;
-            transition: .4s all ease-in-out;
+            transition: 0.4s all ease-in-out;
         }
 
         & img {
@@ -975,7 +272,7 @@
     }
 
     &__text {
-        @include position($top:0, $left:0);
+        @include position($top: 0, $left: 0);
         @include size(100%);
         @include flex(flex, center, center, column);
         font-size: 18px;
@@ -984,7 +281,7 @@
         color: #ffffff;
         opacity: 0;
         transform: translateX(-50px);
-        transition: .4s all ease-in-out;
+        transition: 0.4s all ease-in-out;
 
         &--blog {
             margin-top: 20px;
@@ -1008,7 +305,7 @@
             }
 
             &::before {
-                @include position($bottom:-30%, $left:0);
+                @include position($bottom: -30%, $left: 0);
                 width: 380px;
                 height: 2px;
                 background-color: #e5e5e5;
@@ -1020,7 +317,6 @@
         margin-bottom: 12px;
 
         &--blog {
-
             @include flex(flex, center, flex-start);
             margin-top: 15%;
 
@@ -1028,17 +324,15 @@
                 margin: 0 5%;
             }
         }
-
     }
 
-
     &__social {
-        @include position($top:0, $left:0);
+        @include position($top: 0, $left: 0);
         @include size(100%);
         @include flex(flex, center, center);
         transform: translateY(20%);
         opacity: 0;
-        transition: .3s all ease-in-out;
+        transition: 0.3s all ease-in-out;
 
         & a {
             @include size(56px);
@@ -1047,7 +341,7 @@
             border-right: 1px solid #f38181;
             color: #f38181;
             font-size: 20px;
-            transition: .3s all ease-in-out;
+            transition: 0.3s all ease-in-out;
 
             &:nth-child(4) {
                 border: none;
@@ -1065,9 +359,8 @@
         }
     }
 
-
     &__team {
-        @include position($bottom:-15%, $left:50%);
+        @include position($bottom: -15%, $left: 50%);
         transform: translateX(-50%);
         text-align: center;
 
@@ -1089,7 +382,7 @@
     }
 
     &__date {
-        @include position($bottom:5%, $left:-5%);
+        @include position($bottom: 5%, $left: -5%);
         @include size(60px, 70px);
         @include flex(flex, center, center, column);
         background-color: #95e1d3;
@@ -1111,15 +404,12 @@
     }
 }
 
-
-
 //-------------------------
 
 .c-counter {
     @include flex(flex, center, space-between);
     width: 100%;
     color: #ffffff;
-
 
     &__item {
         position: relative;
@@ -1128,7 +418,7 @@
         padding: 90px 0;
 
         &::before {
-            @include position($top:0, $left:0);
+            @include position($top: 0, $left: 0);
             @include size(1px, 100%);
             background-color: #ffffff;
             opacity: 0.3;
@@ -1136,14 +426,12 @@
 
         &:nth-last-of-type(1) {
             &::after {
-                @include position($top:0, $right:0);
+                @include position($top: 0, $right: 0);
                 @include size(1px, 100%);
                 background-color: #ffffff;
                 opacity: 0.3;
             }
         }
-
-
     }
 
     &__number {
@@ -1160,7 +448,6 @@
     }
 }
 
-
 //-------------------------
 
 .c-feature {
@@ -1168,7 +455,7 @@
     position: relative;
 
     &::after {
-        @include position($top:50%, $right:0);
+        @include position($top: 50%, $right: 0);
         @include size(100%, 2px);
         background-color: #e5e5e5;
     }
@@ -1184,7 +471,6 @@
     &__box {
         @include flex(flex, flex-start, space-between);
     }
-
 
     &__icon {
         @include size(auto);
@@ -1209,22 +495,19 @@
     }
 }
 
-
 //-------------------------
 
 .c-phone {
-
     position: relative;
 
     & img {
         max-width: 100%;
 
         &:nth-child(2) {
-            @include position($bottom:-17%, $right:-35%);
+            @include position($bottom: -17%, $right: -35%);
         }
     }
 }
-
 
 //-------------------------
 
@@ -1275,19 +558,18 @@
     }
 
     &__arrow {
-        @include position($top:50%, $right:0);
+        @include position($top: 50%, $right: 0);
         transform: translateY(-50%) rotate(180deg);
         margin-right: 20px;
         font-size: 26px;
-        transition: .4s all ease-in-out;
-
+        transition: 0.4s all ease-in-out;
     }
 }
 
 .card-body {
     color: #999999;
     font-style: italic;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 14px;
     line-height: 25px;
     overflow: auto;
@@ -1295,12 +577,9 @@
     padding: 0 20px;
 }
 
-
 a.collapsed>.c-info__arrow {
     transform: translateY(-50%) rotate(0deg);
 }
-
-
 
 //-------------------------------
 
@@ -1309,7 +588,7 @@ a.collapsed>.c-info__arrow {
     max-width: 980px;
     width: 100%;
     height: 100%;
-    @include position($position: relative, $display:'', $top:50%, $left:50%);
+    @include position($position: relative, $display: "", $top: 50%, $left: 50%);
     transform: translate(-50%, 0%);
     padding: 0 20px;
 
@@ -1324,11 +603,10 @@ a.collapsed>.c-info__arrow {
     }
 
     &__text {
-
         position: relative;
 
         &::before {
-            @include position($bottom:5%, $left:0);
+            @include position($bottom: 5%, $left: 0);
             width: 60px;
             height: 3px;
             background-color: #f38181;
@@ -1344,18 +622,14 @@ a.collapsed>.c-info__arrow {
         font-weight: 400;
         line-height: 36px;
         margin-bottom: 20px;
-
-
     }
 
     &__author {
-
         color: #333333;
         font-family: "Kaushan Script";
         font-size: 24px;
         font-weight: 400;
         margin-left: 70px;
-
     }
 }
 
@@ -1377,13 +651,12 @@ a.collapsed>.c-info__arrow {
 // ----------------------------------
 
 .c-logo {
-
     @include flex(flex, center, space-between);
     @include size(100%);
 
     &__box {
         cursor: pointer;
-        transition: .4s all ease-in-out;
+        transition: 0.4s all ease-in-out;
 
         &:hover {
             transform: scale(1.2) rotate(360deg);
@@ -1395,8 +668,6 @@ a.collapsed>.c-info__arrow {
     }
 }
 
-
-
 // ----------------------------------
 
 .c-gallery {
@@ -1407,7 +678,6 @@ a.collapsed>.c-info__arrow {
     grid-template-rows: repeat(2, auto);
 
     &__box {
-
         &:nth-child(3) {
             grid-column: 3;
             grid-row: 1/3;
@@ -1420,7 +690,6 @@ a.collapsed>.c-info__arrow {
         }
     }
 }
-
 
 // ----------------------------------
 
@@ -1454,21 +723,18 @@ a.collapsed>.c-info__arrow {
 
     &__text {
         max-width: 375px;
-
     }
 
     &__name {
-
         margin-bottom: 40px;
         position: relative;
 
         &::before {
-            @include position($bottom:-20%, $left:0);
+            @include position($bottom: -20%, $left: 0);
             width: 60px;
             height: 3px;
             background-color: #f38181;
         }
-
 
         & p {
             color: #333333;
@@ -1486,7 +752,6 @@ a.collapsed>.c-info__arrow {
                 margin-top: 10px;
             }
         }
-
     }
 
     &__desc {
@@ -1496,8 +761,6 @@ a.collapsed>.c-info__arrow {
         line-height: 24px;
     }
 }
-
-
 
 .c-contact {
     display: flex;
@@ -1525,9 +788,6 @@ a.collapsed>.c-info__arrow {
         line-height: 24px;
         margin-bottom: 45px;
 
-
-
-
         &+p {
             color: #333333;
             font-size: 14px;
@@ -1535,7 +795,7 @@ a.collapsed>.c-info__arrow {
             position: relative;
 
             &::before {
-                @include position($bottom:-15px, $left:0);
+                @include position($bottom: -15px, $left: 0);
                 width: 480px;
                 height: 2px;
                 background-color: #e5e5e5;
@@ -1548,7 +808,6 @@ a.collapsed>.c-info__arrow {
             }
         }
     }
-
 
     &__social {
         display: flex;
@@ -1568,19 +827,18 @@ a.collapsed>.c-info__arrow {
             width: 100%;
             margin-bottom: 40px;
 
-
             & a {
                 color: #95e1d3;
-                transition: .4s all ease-in-out;
+                transition: 0.4s all ease-in-out;
                 position: relative;
 
                 &::before {
-                    @include position($top:50%, $left:50%);
+                    @include position($top: 50%, $left: 50%);
                     @include size(40px);
                     transform: translate(-50%, -50%);
                     border: 1px solid #95e1d3;
                     border-radius: 50%;
-                    transition: .4s all ease-in-out;
+                    transition: 0.4s all ease-in-out;
                     opacity: 0;
                 }
 
@@ -1595,7 +853,6 @@ a.collapsed>.c-info__arrow {
             }
         }
     }
-
 
     &__sub {
         display: flex;
@@ -1614,7 +871,6 @@ a.collapsed>.c-info__arrow {
         }
     }
 
-
     &__post {
         max-width: 345px;
         display: flex;
@@ -1627,7 +883,6 @@ a.collapsed>.c-info__arrow {
             & img {
                 display: block;
             }
-
         }
 
         &-title {
@@ -1649,7 +904,6 @@ a.collapsed>.c-info__arrow {
         }
     }
 
-
     &__gallery {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -1666,7 +920,7 @@ a.collapsed>.c-info__arrow {
         }
 
         & p {
-            @include position($bottom:-15%, $left:0);
+            @include position($bottom: -15%, $left: 0);
             color: #333333;
             font-family: "Roboto";
             font-size: 13px;
