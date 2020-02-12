@@ -11,10 +11,15 @@
 
 
 // Wide screen < 1024px
-@media only screen and (max-width: 1024px) {}
+@media only screen and (max-width: 1024px) {
+    @include c-intro\@screen_wide;
+    @include c-button\@screen_wide;
+    @include c-info\@screen_wide;
+    @include l-section\@screen_wide;
+}
 
 
 // Mega screen > 1280px
 @media only screen and (max-width: 1280px) {
-    // @include c-menu\@screen_mega;
+    @include c-slider\@screen_mega;
 }
