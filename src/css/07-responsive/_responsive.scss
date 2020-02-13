@@ -1,11 +1,15 @@
-// Tiny screen > 460px
-@media only screen and (max-width: 460px) {}
+// Mega screen > 1280px
+@media only screen and (max-width: 1280px) {
+    @include c-slider\@screen_mega;
+}
 
-// Small screen < 640px
-@media only screen and (max-width: 640px) {
-
-    // @include c-counter\@screen_small;
-
+// Wide screen < 1024px
+@media only screen and (max-width: 1024px) {
+    @include c-intro\@screen_wide;
+    @include c-button\@screen_wide;
+    @include c-info\@screen_wide;
+    @include l-section\@screen_wide;
+    @include c-contact\@screen_wide;
 }
 
 // Medium screen < 768px
@@ -21,18 +25,15 @@
     @include c-counter\@screen_medium;
 }
 
+// Small screen < 640px
+@media only screen and (max-width: 640px) {
+    @include c-phone\@screen_small;
+    @include c-intro\@screen_small;
 
-// Wide screen < 1024px
-@media only screen and (max-width: 1024px) {
-    @include c-intro\@screen_wide;
-    @include c-button\@screen_wide;
-    @include c-info\@screen_wide;
-    @include l-section\@screen_wide;
-    @include c-contact\@screen_wide;
 }
 
-
-// Mega screen > 1280px
-@media only screen and (max-width: 1280px) {
-    @include c-slider\@screen_mega;
+// Tiny screen > 460px
+@media only screen and (max-width: 460px) {
+    @include c-intro\@screen_tiny;
+    @include c-gallery\@screen_tiny;
 }
