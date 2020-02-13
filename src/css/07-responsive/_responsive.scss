@@ -2,11 +2,23 @@
 @media only screen and (max-width: 460px) {}
 
 // Small screen < 640px
-@media only screen and (max-width: 600px) {}
+@media only screen and (max-width: 640px) {
+
+    // @include c-counter\@screen_small;
+
+}
 
 // Medium screen < 768px
 @media only screen and (max-width: 768px) {
     @include c-menu\@screen_medium;
+    @include c-logo\@screen_medium;
+    @include c-phone\@screen_medium;
+    @include c-contact\@screen_medium;
+    @include c-card\@screen_medium;
+    @include c-client\@screen_medium;
+    @include c-gallery\@screen_medium;
+    @include c-feature\@screen_medium;
+    @include c-counter\@screen_medium;
 }
 
 
@@ -16,6 +28,7 @@
     @include c-button\@screen_wide;
     @include c-info\@screen_wide;
     @include l-section\@screen_wide;
+    @include c-contact\@screen_wide;
 }
 
 

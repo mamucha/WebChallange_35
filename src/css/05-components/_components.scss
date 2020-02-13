@@ -1,9 +1,5 @@
 //--------------------------
-.c-logo__title {
-    color: #ffffff;
-    font-size: 30px;
-    font-weight: 700;
-}
+
 
 //--------------------------
 .c-menu {
@@ -69,7 +65,7 @@
             @include flex(flex, center, center, column);
             // display: none;
             width: 100%;
-            background-color: #ffffff;
+            background-color: #e88783;
             opacity: 0.7;
             transform: translateX(-100%);
             transition: .4s all ease-in-out;
@@ -81,14 +77,22 @@
         }
 
         &__item {
-            height: 30px;
-            @include flex(flex, center, center);
             width: 100%;
             cursor: pointer;
             transition: 0.3s all ease-in-out;
 
             &:hover {
                 background-color: #edbf88;
+            }
+        }
+
+        &__link {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+
+            &::before {
+                width: 10%;
             }
         }
 
@@ -341,7 +345,8 @@
 
             &::before {
                 @include position($bottom: -30%, $left: 0);
-                width: 380px;
+                max-width: 380px;
+                width: 100%;
                 height: 2px;
                 background-color: #e5e5e5;
             }
@@ -439,6 +444,50 @@
     }
 }
 
+
+// media queries
+// screen < 768px
+
+@mixin c-card\@screen_medium {
+    .c-card {
+
+        flex-direction: column;
+        align-items: center;
+
+        &__box {
+            &:nth-child(2) {
+                margin: 25% 0;
+            }
+
+            &--blog {
+                @include flex(flex, center, center, column);
+
+                &:nth-child(2) {
+                    margin: 15% 0;
+                }
+
+            }
+        }
+
+        &__text {
+
+            &--blog {
+                text-align: center;
+
+                &::before {
+                    max-width: inherit;
+                }
+            }
+        }
+
+        &__icon {
+            &--blog {
+                margin-top: 10%;
+            }
+        }
+    }
+}
+
 //-------------------------
 
 .c-counter {
@@ -480,6 +529,32 @@
         font-size: 14px;
         font-weight: 400;
         text-transform: uppercase;
+    }
+}
+
+
+// media queries
+// screen < 768px
+
+@mixin c-counter\@screen_medium {
+    .c-counter {
+        flex-direction: column;
+
+        &__item {
+            padding: 30px 0;
+
+            &::before {
+                height: 1px;
+                width: 100%;
+            }
+
+            &:nth-last-of-type(1) {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+
     }
 }
 
@@ -530,6 +605,23 @@
     }
 }
 
+
+// media queries
+// screen < 768px
+
+@mixin c-feature\@screen_medium {
+    .c-feature {
+
+        &__inline {
+            flex-direction: column;
+        }
+
+        &__box {
+            height: 100px;
+        }
+    }
+}
+
 //-------------------------
 
 .c-phone {
@@ -540,6 +632,20 @@
 
         &:nth-child(2) {
             @include position($bottom: -17%, $right: -35%);
+        }
+    }
+}
+
+// screen < 768px
+// media queries
+
+@mixin c-phone\@screen_medium {
+    .c-phone {
+        & img {
+
+            &:nth-child(2) {
+                right: -15%;
+            }
         }
     }
 }
@@ -626,6 +732,7 @@ a.collapsed>.c-info__arrow {
 
         &__img {
             margin-right: 0;
+            width: auto;
         }
     }
 }
@@ -716,6 +823,12 @@ a.collapsed>.c-info__arrow {
     @include flex(flex, center, space-between);
     @include size(100%);
 
+    &__title {
+        color: #ffffff;
+        font-size: 30px;
+        font-weight: 700;
+    }
+
     &__box {
         cursor: pointer;
         transition: 0.4s all ease-in-out;
@@ -727,6 +840,22 @@ a.collapsed>.c-info__arrow {
         & img {
             display: block;
         }
+    }
+}
+
+// screen < 768px
+// media queries
+
+@mixin c-logo\@screen_medium {
+
+    .c-logo {
+        flex-wrap: wrap;
+
+        &__box {
+            flex-basis: 50%;
+            @include flex(flex, center, center);
+        }
+
     }
 }
 
@@ -753,6 +882,25 @@ a.collapsed>.c-info__arrow {
     }
 }
 
+// media queries
+// screen < 768px
+
+@mixin c-gallery\@screen_medium {
+
+    .c-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, auto);
+
+        &__box {
+
+            &:nth-child(3) {
+                grid-column: 2;
+                grid-row: 2/4;
+            }
+        }
+    }
+}
+
 // ----------------------------------
 
 .c-client {
@@ -765,6 +913,7 @@ a.collapsed>.c-info__arrow {
         display: flex;
         flex-basis: 50%;
         margin-bottom: 80px;
+        height: 230px;
 
         &:nth-child(3) {
             margin-bottom: 0;
@@ -824,6 +973,30 @@ a.collapsed>.c-info__arrow {
     }
 }
 
+
+// media queries
+// screen < 768px
+
+@mixin c-client\@screen_medium {
+    .c-client {
+        flex-direction: column;
+
+        &__box {
+
+            margin-bottom: 5%;
+
+            &:nth-child(3) {
+                margin-bottom: 5%;
+            }
+        }
+
+
+    }
+}
+
+
+// --------------------------------
+
 .c-contact {
     display: flex;
     justify-content: space-between;
@@ -858,7 +1031,8 @@ a.collapsed>.c-info__arrow {
 
             &::before {
                 @include position($bottom: -15px, $left: 0);
-                width: 480px;
+                max-width: 480px;
+                width: 100%;
                 height: 2px;
                 background-color: #e5e5e5;
             }
@@ -988,6 +1162,38 @@ a.collapsed>.c-info__arrow {
             font-size: 13px;
             line-height: 24px;
             font-style: italic;
+        }
+    }
+}
+
+
+// screen < 1024px
+// media queries
+
+@mixin c-contact\@screen_wide {
+    .c-contact {
+
+        &__box {
+            &:nth-child(3) {
+                display: none;
+            }
+        }
+    }
+}
+
+
+// screen < 768px
+
+@mixin c-contact\@screen_medium {
+    .c-contact {
+        flex-direction: column;
+        align-items: center;
+
+        &__box {
+            &:nth-child(1) {
+                margin-bottom: 5%;
+            }
+
         }
     }
 }
