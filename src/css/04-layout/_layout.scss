@@ -13,6 +13,7 @@
     height: 100%;
     margin: 0 auto;
     @include flex(flex, center, space-between);
+    padding: 15px 50px;
 
     @media (max-width:1280px) {
       justify-content: space-around;

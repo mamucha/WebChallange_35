@@ -8,13 +8,11 @@
 //--------------------------
 .c-menu {
     max-width: 620px;
-
-
-
+    width: 100%;
 
     &__list {
         @include flex(flex, center, space-evenly);
-
+        line-height: 30px;
     }
 
     &__item {
@@ -34,9 +32,10 @@
         text-decoration: none;
         transition: 0.3s all ease-in-out;
         position: relative;
+        display: block;
 
         &::before {
-            @include position($left: 50%, $bottom: 0px);
+            @include position($left: 50%, $bottom: 5px);
             transform: translate(-50%, 0) scaleX(0);
             height: 2px;
             width: 50%;
@@ -61,20 +60,23 @@
 
 @mixin c-menu\@screen_medium {
     .c-menu {
-
         max-width: 100%;
+        width: auto;
 
         &__list {
             z-index: 3;
-            @include position($top:60px, $left:0);
+            @include position($top: 60px, $left: 0);
             @include flex(flex, center, center, column);
-            display: none;
+            // display: none;
             width: 100%;
             background-color: #ffffff;
-            opacity: .7;
+            opacity: 0.7;
+            transform: translateX(-100%);
+            transition: .4s all ease-in-out;
 
             &--active {
-                opacity: 1;
+                // display: block;
+                transform: translateX(0%);
             }
         }
 
@@ -83,7 +85,7 @@
             @include flex(flex, center, center);
             width: 100%;
             cursor: pointer;
-            transition: .3s all ease-in-out;
+            transition: 0.3s all ease-in-out;
 
             &:hover {
                 background-color: #edbf88;
@@ -102,6 +104,7 @@
         }
     }
 }
+
 
 //--------------------------
 
@@ -137,13 +140,10 @@
     }
 }
 
-
 //media queries
 //screen < 1024px
 @mixin c-intro\@screen_wide {
-
     .c-intro {
-
         &__title {
             font-size: 60px;
             margin-bottom: 25px;
@@ -191,13 +191,10 @@
     }
 }
 
-
 //media queries
 //screen < 1024px
 @mixin c-button\@screen_wide {
-
     .c-button {
-
         &--intro {
             margin-top: 70px;
         }
@@ -445,7 +442,7 @@
 //-------------------------
 
 .c-counter {
-    @include flex(flex, center, space-between);
+    @include flex(flex, flex-start, space-between);
     width: 100%;
     color: #ffffff;
 
@@ -555,6 +552,7 @@
 
     &__img {
         margin-right: 30px;
+        width: 100%;
 
         & img {
             max-width: 100%;
@@ -619,11 +617,9 @@ a.collapsed>.c-info__arrow {
     transform: translateY(-50%) rotate(0deg);
 }
 
-
 //media queries
 //screen < 1024px
 @mixin c-info\@screen_wide {
-
     .c-info {
         @include flex(flex, center, center, column);
         width: 80%;
@@ -633,7 +629,6 @@ a.collapsed>.c-info__arrow {
         }
     }
 }
-
 
 //-------------------------------
 
@@ -702,13 +697,10 @@ a.collapsed>.c-info__arrow {
     color: black;
 }
 
-
-
 // media queries
 // screen < 1280px
 
 @mixin c-slider\@screen_mega {
-
     .carousel-control-prev {
         left: -8%;
     }
