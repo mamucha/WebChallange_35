@@ -1,6 +1,5 @@
 //--------------------------
 
-
 //--------------------------
 .c-menu {
     max-width: 620px;
@@ -60,19 +59,19 @@
         width: auto;
 
         &__list {
-            z-index: 3;
+            z-index: -1;
             @include position($top: 60px, $left: 0);
             @include flex(flex, center, center, column);
             // display: none;
             width: 100%;
             background-color: #e88783;
             opacity: 0.7;
-            transform: translateX(-100%);
-            transition: .4s all ease-in-out;
+            transform: translateY(-120%);
+            transition: 0.4s all ease-in-out;
 
             &--active {
                 // display: block;
-                transform: translateX(0%);
+                transform: translateY(0%);
             }
         }
 
@@ -108,7 +107,6 @@
         }
     }
 }
-
 
 //--------------------------
 
@@ -159,7 +157,6 @@
         }
     }
 }
-
 
 //screen < 640px
 @mixin c-intro\@screen_small {
@@ -473,13 +470,11 @@
     }
 }
 
-
 // media queries
 // screen < 768px
 
 @mixin c-card\@screen_medium {
     .c-card {
-
         flex-direction: column;
         align-items: center;
 
@@ -494,12 +489,10 @@
                 &:nth-child(2) {
                     margin: 15% 0;
                 }
-
             }
         }
 
         &__text {
-
             &--blog {
                 text-align: center;
 
@@ -561,7 +554,6 @@
     }
 }
 
-
 // media queries
 // screen < 768px
 
@@ -583,7 +575,6 @@
                 }
             }
         }
-
     }
 }
 
@@ -634,19 +625,17 @@
     }
 }
 
-
 // media queries
 // screen < 768px
 
 @mixin c-feature\@screen_medium {
     .c-feature {
-
         &__inline {
             flex-direction: column;
         }
 
         &__box {
-            height: 100px;
+            margin-bottom: 10%;
         }
     }
 }
@@ -671,7 +660,6 @@
 @mixin c-phone\@screen_medium {
     .c-phone {
         & img {
-
             &:nth-child(2) {
                 right: -15%;
             }
@@ -679,12 +667,10 @@
     }
 }
 
-
 // screen < 640px
 @mixin c-phone\@screen_small {
     .c-phone {
         & img {
-
             &:nth-child(2) {
                 right: -5% !important;
                 width: 50%;
@@ -705,7 +691,7 @@
 
         & img {
             max-width: 100%;
-            height: 100%;
+            height: auto;
             display: block;
         }
     }
@@ -890,7 +876,6 @@ a.collapsed>.c-info__arrow {
 // media queries
 
 @mixin c-logo\@screen_medium {
-
     .c-logo {
         flex-wrap: wrap;
 
@@ -898,7 +883,6 @@ a.collapsed>.c-info__arrow {
             flex-basis: 50%;
             @include flex(flex, center, center);
         }
-
     }
 }
 
@@ -929,13 +913,11 @@ a.collapsed>.c-info__arrow {
 // screen < 768px
 
 @mixin c-gallery\@screen_medium {
-
     .c-gallery {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, auto);
 
         &__box {
-
             &:nth-child(3) {
                 grid-column: 2;
                 grid-row: 2/4;
@@ -944,17 +926,14 @@ a.collapsed>.c-info__arrow {
     }
 }
 
-
 // screen < 460px
 
 @mixin c-gallery\@screen_tiny {
-
     .c-gallery {
         grid-template-columns: auto;
         grid-template-rows: auto;
 
         &__box {
-
             &:nth-child(3) {
                 grid-column: auto;
                 grid-row: auto;
@@ -1035,7 +1014,6 @@ a.collapsed>.c-info__arrow {
     }
 }
 
-
 // media queries
 // screen < 768px
 
@@ -1044,18 +1022,14 @@ a.collapsed>.c-info__arrow {
         flex-direction: column;
 
         &__box {
-
             margin-bottom: 5%;
 
             &:nth-child(3) {
                 margin-bottom: 5%;
             }
         }
-
-
     }
 }
-
 
 // --------------------------------
 
@@ -1228,13 +1202,11 @@ a.collapsed>.c-info__arrow {
     }
 }
 
-
 // screen < 1024px
 // media queries
 
 @mixin c-contact\@screen_wide {
     .c-contact {
-
         &__box {
             &:nth-child(3) {
                 display: none;
@@ -1242,7 +1214,6 @@ a.collapsed>.c-info__arrow {
         }
     }
 }
-
 
 // screen < 768px
 
@@ -1255,7 +1226,6 @@ a.collapsed>.c-info__arrow {
             &:nth-child(1) {
                 margin-bottom: 5%;
             }
-
         }
     }
 }
