@@ -1,3 +1,4 @@
+// Menu activ and aria label--------------------------------------
 const btnMenu = document.querySelector('.c-menu__button');
 const listMenu = document.querySelector('.c-menu__list');
 const linkMenu = document.querySelectorAll('.c-menu__link');
@@ -40,7 +41,8 @@ const closeMenu = () => {
 }
 
 
-// Menu scroll
+
+// Menu scroll-------------------------------------------------
 $(document).scroll(() => {
     const scrollValue = $(this).scrollTop();
     const windowHeight = $(window).height();
@@ -54,8 +56,8 @@ $(document).scroll(() => {
 })
 
 
-// count up animation
 
+// count up animation-----------------------------------------
 $(window).scroll(function () {
     if ($(window).scrollTop() > 980) {
         $('.c-counter__number').each(function () {
@@ -81,4 +83,17 @@ $(window).scroll(function () {
                 });
         });
     }
+});
+
+
+
+
+// go back top------------------------------
+$('.c-logo__title').on("click", function (e) {
+    e.preventDefault();
+    $("html, body").animate({
+            scrollTop: 0
+        },
+        "400"
+    );
 });
